@@ -1,0 +1,548 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<title>国家企业信用信息公示系统-详情</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link type="text/css" href="css/CSS3.css" rel="stylesheet" />
+		<link href="fontawesome-4.2.0_ie7/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+		<link href="fontawesome-4.2.0_ie7/4.2.0/css/font-awesome-ie7.min.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/loaders.css">
+		<script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/TouchSlide.js"></script>
+		<script type="text/javascript" src="js/template.js"></script>
+		<script type="text/javascript" src="js/commonpath.js"></script>
+
+		<style>
+			#carousel {
+				width: 100%;
+				overflow: hidden;
+			}
+			
+			#carousel ul {
+				position: relative;
+				width: 960px !important;
+			}
+			
+			#carousel li {
+				float: left;
+				margin-left: 15px;
+				height: 36px;
+				padding-right: 5px;
+				line-height: 35px;
+				font-size: 16px;
+				text-align: center;
+			}
+			
+			#carousel li i {
+				padding-right: 5px;
+			}
+		</style>
+	</head>
+
+	<body style="overflow:hidden;">
+		<header class="xq_top">
+			<a href="search_list.html" target="_self"><i class="fa fa-angle-left"></i></a> 公司详情
+			<!--<div class="follow_1"><i class="fa fa-heart-o"></i><i class="fa fa-heart"></i><span>未关注</span></div>-->
+			  </header>
+		<div class="xq_box" style="width:100%; overflow:auto; overflow-x:hidden !important;">
+			<div class="xq_jcxx_1">
+				<ul id="CompanyDetails_ul">
+					<script type="text/html" id="CompanyDetails">
+						<li class="list_2_1_title">{{ENTNAME}}</li>
+						<!--<li>注册号 <span> {{REGNO}}</span></li>-->
+						{{if UNISCID == "" || UNISCID == "{}"}}
+						<li>注册号 <span> {{REGNO}}</span></li>{{else}}
+						<li>统一社会信用代码 <span> {{UNISCID}}</span></li>{{/if}}
+						<li>负责人<span> {{NAME}}</span></li>
+						<li>登记机关 <span> {{REGORG_CN}}</span></li>
+						<li>成立日期 <span> {{ESTDATE}}</span></li>
+						<li>
+							<div class="list_2_1_cx">{{REGSTATE_CN}}</div>
+						</li>
+						<li>
+							{{if busexceptcount !=0}}
+							<span  style="color:#FF0000;">该企业被列入经营异常名录</span> {{/if}}
+						</li>
+					</script>
+				</ul>
+
+				<!--<ul>
+      <li class="list_2_1_title">阿里巴巴（中国）网络技术有限公司<br>
+        上海分公司</li>
+      <li>注册号 <span> 150404000031577</span></li>
+      <li>法定代表人 <span> 徐晓春</span></li>
+      <li>登记机关 <span> 北京市工商局</span></li>
+      <li>成立日期 <span> 1996年09月09日</span></li>
+      <li>
+        <div class="list_2_1_cx">存续</div>
+        <span>该企业被列入经营异常名录</span></li>
+    </ul>-->
+			</div>
+			<div class="index_line_1"></div>
+			<div class="index_line_3"></div>
+			<div class="xq_jcxx_content">
+				<div id="carousel">
+					<ul id="ul_tab_list">
+						<li class="active"><i class="fa fa-building-o"></i>基础信息</li>
+						<li onclick="javascript:window.location.href='xq_xzxk.html'"><i class="fa fa-file-text-o"></i>行政许可信息</li>
+						<li onclick="javascript:window.location.href='xq_xzcf.html'"><i class="fa fa-sort-amount-asc"></i>行政处罚信息</li>
+						<li onclick="javascript:window.location.href='xq_jyyc.html'"><i class="fa fa-thumbs-o-down"></i>列入经营异常名录信息</li>
+						<li onclick="javascript:window.location.href='xq_yzwf.html'"><i class="fa fa-exclamation-triangle "></i>列入严重违法失信企业名单（黑名单）信息</li>
+					</ul>
+				</div>
+				<div class="index_line_4"></div>
+				<div class="index_line_1"></div>
+
+				<!----------基础信息--------------->
+
+				<div class="xq_jcxx_13">
+					<div class="xq_jcxx_2_1"></div>
+					营业执照信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-up"></i></div>
+				</div>
+				<div class="xq_jcxx_4" id="Licence">
+					<script type="text/html" id="LicenceDetails">
+						<ul class="xq_jcxx_4_1">
+							{{if UNISCID == "" || UNISCID == "{}"}}
+							<li>注册号 <span> {{REGNO}}</span></li>{{else}}
+							<li>统一社会信用代码 <span> {{UNISCID}}</span></li>{{/if}}
+							<li> 企业名称 <span> {{ENTNAME}}</span> </li>
+						</ul>
+						<ul class="xq_jcxx_4_1">
+							<li> 类型 <span> {{ENTTYPE_CN}}</span> </li>
+							<li> 负责人<span> {{NAME}}</span> </li>
+						</ul>
+						<ul class="xq_jcxx_4_1">
+							<li> 营业期限自 <span> {{OPFROM }}</span> </li>
+							<li> 成立日期 <span> {{ESTDATE}}</span> </li>
+						</ul>
+						<ul class="xq_jcxx_4_1">
+							<li> 登记机关 <span> {{REGORG_CN}}</span> </li>
+							<li> 营业期限至 <span> {{OPTO}}</span> </li>
+						</ul>
+						<ul class="xq_jcxx_4_1">
+							<li> 登记状态 <span> {{REGSTATE_CN}}</span> </li>
+							<li> 核准日期 <span> {{APPRDATE}}</span> </li>
+						</ul>
+						<ul class="xq_jcxx_4_2">
+							<li> 营业场所 <span> {{DOM}}</span> </li>
+						</ul>
+						<ul class="xq_jcxx_4_2">
+							<li> 经营范围 <span> {{OPSCOPE}}</span> </li>
+						</ul>
+					</script>
+				</div>
+				<div class="index_line_3"></div>
+				<div class="xq_jcxx_2" id="invBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					<!--股东及出资信息-->
+					合作各方信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_3" style="display:none">
+
+					<div id="holderInfo">
+						<script type="text/html" id="holderInfoDetail">
+							{{each}}
+							<div class="xq_jcxx_7">
+								<!--<a href="gd_ck.html">-->
+									<ul>
+										<!--<li>股东名称 <span> {{$value.INVNAME}}</span></li>
+		                <li>股东类型 <span> {{$value.INVTYPE}}</span></li>
+		                <li>证件/证照类型 <span> {{$value.PAPERTYPE}}</span></li>
+		                <li>证件/证照号码 <span> {{$value.INVNO}}</span></li>-->
+										<li>合作各方的名称 <span> {{$value.INVNAME}}</span></li>
+										<li>责任形式 <span> {{$value.INVTYPE}}</span></li>
+									</ul>
+									<!--<div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+								</a>-->
+							</div>
+							{{/each}}
+						</script>
+					</div>
+
+					<!--<div class="xq_jcxx_7">
+        <a href="gd_ck.html">
+              <ul>
+                <li>股东名称 <span> 中远财务有限公司</span></li>
+                <li>股东类型 <span> 企业法人</span></li>
+                <li>证件/证照类型 <span> 法人营业执照</span></li>
+                <li>证件/证照号码 <span> 9111000MA023819110</span></li>
+              </ul>
+              <div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+          </a>
+     </div>-->
+					<!--<div class="more_1"><a href="more_gdcz.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+				</div>
+				<div class="index_line_3"></div>
+				<div class="xq_jcxx_2" id="searchChangeBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					变更信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_4" style="display:none">
+					<!--<div class="xq_jcxx_11">
+        <ul class="xq_jcxx_4_1">
+            <li> 变更事项 <span>注册资本变更</span> </li>
+            <li> 变更日期 <span> 2014年5月7日</span> </li>
+        </ul>
+        <ul class="xq_jcxx_4_1">
+            <li> 变更前内容 <span>185219.707万元人民币</span> </li>
+            <li> 变更后内容 <span>212345.322万元人民币</span> </li>
+        </ul>
+     </div>-->
+					<div id="changeInfo">
+						<!--self add-->
+						<script type="text/html" id="changeInfoDetail">
+							{{each}}
+							<div class="xq_jcxx_11">
+								<ul class="xq_jcxx_4_1">
+									<li> 变更事项 <span>{{$value.ALTITEM_CN}}</span> </li>
+									<li> 变更日期 <span>{{$value.ALTDATE}}</span> </li>
+								</ul>
+								<ul class="xq_jcxx_4_1">
+									<li> 变更前内容 <span>{{$value.ALTBE}}</span> </li>
+									<li> 变更后内容 <span>{{$value.ALTAF}}</span> </li>
+								</ul>
+							</div>
+							{{/each}}
+						</script>
+					</div>
+
+					<!--<div class="more_1"><a href="more_bgxx.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+				</div>
+				<div class="index_line_3"></div>
+				<div class="xq_jcxx_2" id="searchMortBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					动产抵押登记信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_3" style="display:none">
+
+					<div id="pledgeInfo">
+						<!--self add-->
+						<script type="text/html" id="pledgeInfoDetail">
+							{{each}}
+							<div class="xq_jcxx_7">
+								<a href="dcdy_ck.html?morregid={{$value.MORREGID}}">
+									<ul>
+										<li>登记编号 <span>{{$value.MORREGCNO}}</span></li>
+										<li>登记日期 <span> {{$value.REGIDATE}}</span></li>
+										<li>登记机关 <span> {{$value.REGORG}}</span></li>
+										<li>被担保债权数额 <span> {{$value.PRICLASECAM}}</span></li>
+										<li>状态<span> {{$value.TYPE}}</span></li>
+										<li>公示日期 <span> {{$value.PUBLICDATE}}</span></li>
+									</ul>
+									<div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+								</a>
+							</div>
+							{{/each}}
+						</script>
+					</div>
+
+					<!--<div class="xq_jcxx_7">
+          <a href="dcdy_ck.html">
+            <ul>
+              <li>登记编号 <span>12332451231</span></li>
+              <li>登记日期 <span> 2012年9月9日</span></li>
+              <li>登记机关 <span> 北京市海淀区工商行政管理局</span></li>
+              <li>被担保债权数额 <span> 30000 万元</span></li>
+              <li>状态<span> 有效</span></li>
+              <li>公示日期 <span> 012年9月9日</span></li>
+            </ul>
+            <div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+         </a>
+      </div>-->
+					<!----------循环数据--------------->
+					<!--<div class="xq_jcxx_7">
+        <ul>
+          <li>登记编号 <span>12332451231</span></li>
+          <li>登记日期 <span> 2012年9月9日</span></li>
+          <li>登记机关 <span> 北京市海淀区工商行政管理局</span></li>
+          <li>被担保债权数额 <span> 30000 万元</span></li>
+          <li>状态<span> 有效</span></li>
+          <li>公示日期 <span> 012年9月9日</span></li>
+        </ul>
+        <div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+      </div>
+      <div class="xq_jcxx_7">
+        <ul>
+          <li>登记编号 <span>12332451231</span></li>
+          <li>登记日期 <span> 2012年9月9日</span></li>
+          <li>登记机关 <span> 北京市海淀区工商行政管理局</span></li>
+          <li>被担保债权数额 <span> 30000 万元</span></li>
+          <li>状态<span> 有效</span></li>
+          <li>公示日期 <span> 012年9月9日</span></li>
+        </ul>
+        <div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+      </div>-->
+					<!----------循环数据--------------->
+					<!--<div class="more_1"><a href="more_dcdy.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+				</div>
+				<div class="index_line_3"></div>
+
+				<!--删除Dom中知识产权出质登记信息-->
+				<!--知识产权出质登记信息做完后将isLoadData="1"删除，否则不请求数据！！！！-->
+				<div class="xq_jcxx_2" isLoadData="1">
+      				<div class="xq_jcxx_2_1"></div>
+    				  知识产权出质登记信息
+  			    	<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+   				</div>
+				<div class="xq_jcxx_3" style="display:none">
+				<!--<div class="xq_jcxx_7">
+			          <a href="zscq_ck.html">
+			            <ul>            	
+			              <li>知识产权登记证号 <span>9111000MA023819110</span></li>
+			              <li>名称 <span> 福乐多</span></li>
+			              <li>种类<span> 商标</span></li>
+			              <li>出质人名称<span>李铭</span></li>
+			              <li>质权人名称<span>蒋大为</span></li>
+			              <li>质权登记期限<span>2013年10月6日-2014年10月6日</span></li>
+			              <li>股权出质设立登记日期 <span>2011年1月16日</span></li>
+			              <li>状态<span>有效</span></li>
+			              <li>公示日期<span>2011年1月16日</span></li>
+			            </ul>
+			            <div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+			        </a>
+      			</div>-->
+				<ul class="xq_jcxx_4_1"><li> 无 </li></ul>
+				<!--<div class="more_1"><a href="#">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+				</div>
+				<div class="index_line_3"></div>
+			
+				<div class="xq_jcxx_2" id="searchBrandBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					商标注册信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_3" style="display:none">
+					<div class="xq_jcxx_14" id="brandDivID">
+						<script type="text/html" id="brandScriptID">
+							{{each}}
+							<a href="sbzc_ck.html?arrayIndex={{$index}}">
+								<div class="xq_jcxx_14left"><img src="{{$value.TM_IMAGE}}" /></div>
+								<div class="xq_jcxx_14right">
+									<ul>
+										<li>商标注册号<span> {{$value.REG_NUM}}</span></li>
+										<li>类别 <span> {{$value.INT_CLS}}</span></li>
+										<li>注册公告日期 <span> {{$value.REG_ANNC_DATE}}</span></li>
+									</ul>
+								</div>
+								<div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+							</a>
+							{{/each}}
+						</script>
+						<div class="dw"></div>
+					</div>
+				</div>
+				<div class="index_line_3"></div>
+
+				<div class="xq_jcxx_2" id="searchCheckBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					抽查检查结果信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_3" style="display:none">
+					<div id="checkInfo">
+						<!--self add-->
+						<script type="text/html" id="checkInfoDetail">
+							{{each}}
+							<ul>
+								<li>检查实施机关 <span> {{$value.INSAUTH}}</span></li>
+								<li>类型 <span> {{$value.INSTYPE}}</span></li>
+								<li>日期 <span> {{$value.INSDATE}}</span></li>
+								<li>结果 <span>{{$value.INSRES}}</span></li>
+							</ul>
+							{{/each}}
+						</script>
+					</div>
+					<!----------循环数据--------------->
+					<!----------循环数据--------------->
+					<!--<div class="more_1"><a href="more_ccjc.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+				</div>
+
+				<div class="index_line_6">以下内容由该企业提供，并负责真实性 、合法性</div>
+				<div class="xq_jcxx_2 xq_jcxx_15" id="searchAnnRepoBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					企业年报信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_3" style="display:none">
+					<div id="reportInfo">
+						<!--self add-->
+						<script type="text/html" id="reportInfoDetail">
+							{{each}}
+							<div class="xq_jcxx_7">
+								<a href="qynb.html?ancheyear={{$value.ANCHEYEAR}}">
+									<ul class="xq_jcxx_4_1">
+										<li> 报送年度 <span>{{$value.ANCHEYEAR}}</span> </li>
+										<li>公示日期<span> {{$value.ANCHEDATE}}</span> </li>
+									</ul>
+									<div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+								</a>
+							</div>
+							{{/each}}
+						</script>
+					</div>
+					<!----------循环数据--------------->
+					<!----------循环数据--------------->
+				</div>
+				<div class="index_line_3"></div>
+				<div class="xq_jcxx_2 xq_jcxx_15" id="searchEntPermBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					行政许可信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_3" style="display:none">
+					<div id="adminPermiss">
+						<!--self add-->
+						<script type="text/html" id="adminPermissDetail">
+							{{each}}
+							<div class="xq_jcxx_7">
+								<a href="xzxk_ck.html?licid={{$value.LICID}}">
+									<ul>
+										<li>许可文件编号 <span>{{$value.LICNO}}</span></li>
+										<li>许可文件名称<span> {{$value.LICNAME_CN}}</span></li>
+										<li>有效期自<span>{{$value.VALFROM}}</span></li>
+										<li>有效期至<span>{{$value.VALTO}}</span></li>
+										<li>许可机关<span>{{$value.LICANTH}}</span></li>
+										<li>许可内容<span>{{$value.LICITEM}}</span></li>
+										<li>状态<span>{{$value.TYPE}}</span></li>
+									</ul>
+									<div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+								</a>
+							</div>
+							{{/each}}
+						</script>
+					</div>
+					<!--<div class="xq_jcxx_7">
+          <a href="xzxk_ck.html">
+            <ul>
+              <li>许可文件编号 <span>20130000018587</span></li>
+              <li>许可文件名称<span> 矿产经营资格证书</span></li>
+              <li>有效期自<span>2010年1月3日</span></li>
+              <li>有效期至<span>2014年5月3日</span></li>
+              <li>许可机关<span>北京发展和改革委员会</span></li>
+              <li>许可内容<span>矿产开采经营</span></li>
+              <li>状态<span>有效</span></li>
+            </ul>
+            <div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+        </a>
+      </div>-->
+					<!----------循环数据--------------->
+					<!----------循环数据--------------->
+					<!--<div class="more_1"><a href="more_qy_xzxk.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+				</div>
+				<div class="index_line_3"></div>
+				<div class="xq_jcxx_2 xq_jcxx_15" id="searchEntIntePropBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					知识产权出质登记信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_3" style="display:none">
+					<div id="knowledge">
+						<!--self add-->
+						<script type="text/html" id="knowledgeDetail">
+							{{each}}
+							<div class="xq_jcxx_7">
+								<a href="zscq_ck.html?pleid={{$value.PLEID}}">
+									<ul>
+										<li>知识产权登记证号 <span>{{$value.TMREGNO}}</span></li>
+										<li>名称<span>{{$value.TMNAME}}</span></li>
+										<li>种类<span>{{$value.KINDS}}</span></li>
+										<li>出质人名称<span>{{$value.PLEDGOR}}</span></li>
+										<li>质权人名称<span>{{$value.IMPORG}}</span></li>
+										<li>质权登记期限<span>{{$value.PLEREGPERFROM}}-{{$value.PLEREGPERTO}}</span></li>
+										<li>状态<span>{{$value.TYPE}}</span></li>
+										<li>公示日期<span>{{$value.PUBLICDATE}}</span></li>
+									</ul>
+									<div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+								</a>
+							</div>
+							{{/each}}
+						</script>
+					</div>
+
+					<!--<div class="xq_jcxx_7">
+            <a href="zscq_ck.html">
+                <ul>
+                  <li>知识产权登记证号 <span>9111000MA023819110</span></li>
+                  <li>名称<span>福乐多</span></li>
+                  <li>种类<span>商标</span></li>
+                  <li>出质人名称<span>李铭</span></li>
+                  <li>质权人名称<span>蒋大为</span></li>
+                  <li>质权登记期限<span>2013年10月6日-2014年10月6日</span></li>
+                  <li>状态<span>有效</span></li>
+                  <li>公示日期<span>2012年6月2日</span></li>
+                </ul>
+                <div class="list_2_1_jt"><i class="fa fa-angle-right"></i></div>
+            </a>
+        </div>-->
+					<!----------循环数据--------------->
+					<!----------循环数据--------------->
+					<!--<div class="more_1"><a href="more_qy_zscq.html">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+				</div>
+				<div class="index_line_3"></div>
+				<div class="xq_jcxx_2 xq_jcxx_15" id="searchEntPuniBlockFun">
+					<div class="xq_jcxx_2_1"></div>
+					行政处罚信息
+					<div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+				</div>
+				<div class="xq_jcxx_3" style="display:none">
+					<div id="adminPenalty">
+						<!--self add-->
+						<script type="text/html" id="adminPenaltyDetail">
+							{{each}}
+							<div class="xq_jcxx_7">
+								<ul>
+									<li>决定书文号 <span>{{$value.PENDECNO}}</span></li>
+									<li>违法行为类型<span>{{$value.ILLEGACTTYPE}}</span></li>
+									<li>行政处罚内容<span>{{$value.PENCONTENT}}</span></li>
+									<li>决定机关名称<span>{{$value.JUDAUTH }}</span></li>
+									<li>处罚决定日期<span>{{$value.PENDECISSDATE}}</span></li>
+									<li>公示日期<span>{{$value.PUBLICDATE}}</span></li>
+									<li class="xq_jcxx_bz">备注<span>{{$value.REMARK}}</span></li>
+								</ul>
+								<ul>
+									<li class="xq_jcxx_bzcontent">有变更情形
+										<span>1、北京市工商行政管理局2013年5月4日将行政复议罚款金额由100万变更为50万。</span>
+										<span> 2、北京市工商行政管理局2012年3月4日将行政复议罚款金额由50万变更为60万。</span>
+									</li>
+								</ul>
+							</div>
+							{{/each}}
+						</script>
+					</div>
+					<!----------循环数据--------------->
+					<!--<div class="more_1"><a href="more_qy_xzcf.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+				</div>
+
+				<!----------基础信息结束--------------->
+			</div>
+			<div class="dw"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/xq_jcxx_15.js"></script>
+	<script type="text/javascript" src="js/iscroll.js"></script>
+	<script>
+		window.addEventListener('load', function() {
+			var $carousel = document.getElementById('carousel'),
+				$ul = $carousel.querySelector('ul'),
+				liArray = $carousel.querySelectorAll('li'),
+				liNum = liArray.length;
+			$ul.style.width = (liArray[0].clientWidth + 10) * 7 + "px";
+			var carousel = new iScroll("carousel", {
+				hScrollbar: false,
+				vScrollbar: false
+			});
+		});
+	</script>
+
+</html>

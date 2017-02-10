@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+@media only screen and (max-width : 1024px) {  
+.content_2 input{ width:95%; vertical-align:middle; line-height:50px; height:50px; font:16px Arial; color:#999; padding-left:10px; margin-bottom:1px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.list_1_1box{ width:97%; padding-top:6px;}
+.list_1_1 input{ width:95%; vertical-align:middle; line-height:30px; height:30px; font:14px Arial; color:#999; padding-left:10px; margin-bottom:1px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+    }          
+@media only screen and (max-width : 768px) {  
+.content_3_1{width: 92px; height: 92px;background: red;-moz-border-radius: 46px; -webkit-border-radius: 46px;
+ border-radius: 46px; background:#f3f4f8; padding-top:17px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.content_3_2,#content_3_2_{height:59px; width:52.5px; background:url(../images/picon_2.png) no-repeat center; background-size:cover;  transition: all .2s ease 0; -moz-transition: all .2s ease 0; /* Firefox 4 */ -webkit-transition: all .2s ease 0; /* Safari 和 Chrome */ -o-transition: all .2s ease 0; /* Opera */}
+.content_3_3,#content_3_3_{height:51px; width:55px; background:url(../images/picon_3.png) no-repeat center; background-size:cover; transition: all .2s ease 0; -moz-transition: all .2s ease 0; /* Firefox 4 */ -webkit-transition: all .2s ease 0; /* Safari 和 Chrome */ -o-transition: all .2s ease 0; /* Opera */}
+.content_3_4,#content_3_4_{height:58.5px; width:47.5px; background:url(../images/picon_4.png) no-repeat center; background-size:cover;  transition: all .2s ease 0; -moz-transition: all .2s ease 0; /* Firefox 4 */ -webkit-transition: all .2s ease 0; /* Safari 和 Chrome */ -o-transition: all .2s ease 0; /* Opera */}
+.content_3_5,#content_3_5_{height:55px; width:55px; background:url(../images/picon_5.png) no-repeat center; background-size:cover;  transition: all .2s ease 0; -moz-transition: all .2s ease 0; /* Firefox 4 */ -webkit-transition: all .2s ease 0; /* Safari 和 Chrome */ -o-transition: all .2s ease 0; /* Opera */}
+#content_3_2_{ background:url(../images/picon_2_1.png) no-repeat center; background-size:cover;}
+#content_3_3_{ background:url(../images/picon_3_1.png) no-repeat center; background-size:cover;}
+#content_3_4_{ background:url(../images/picon_4_1.png) no-repeat center; background-size:cover;}
+#content_3_5_{ background:url(../images/picon_5_1.png) no-repeat center; background-size:cover;}
+.top{ height:450px; width:100%; background:url(../images/toppad.jpg) no-repeat center; background-size:cover; position:relative; border-top:3px solid #ac812e;}
+.content_2{ bottom:25px;}
+.content_3{ padding:50px 0;}
+.content_2 input{ width:95%; vertical-align:middle; line-height:50px; height:50px; font:16px Arial; color:#999; padding-left:10px; margin-bottom:1px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.list_1_1box{ width:97%; padding-top:6px;}
+.list_1_1 input{ width:94%; vertical-align:middle; line-height:30px; height:30px; font:14px Arial; color:#999; padding-left:10px; margin-bottom:1px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.xq_jcxx_3 li img{ height:300px;}
+}          
+@media only screen and (max-width : 480px) { 
+.content_3_1{width: 75px; height:75px;background: red;-moz-border-radius: 46px; -webkit-border-radius: 25px;
+ border-radius: 25px; background:#f3f4f8; padding-top:12px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.content_3_2,#content_3_2_{height:45.5px; width:40.5px; background:url(../images/icon_2.png) no-repeat center; background-size:cover;  transition: all .2s ease 0; -moz-transition: all .2s ease 0; /* Firefox 4 */ -webkit-transition: all .2s ease 0; /* Safari 和 Chrome */ -o-transition: all .2s ease 0; /* Opera */}
+.content_3_3,#content_3_3_{height:46px; width:49.5px; background:url(../images/icon_3.png) no-repeat center; background-size:cover; transition: all .2s ease 0; -moz-transition: all .2s ease 0; /* Firefox 4 */ -webkit-transition: all .2s ease 0; /* Safari 和 Chrome */ -o-transition: all .2s ease 0; /* Opera */}
+.content_3_4,#content_3_4_{height:44.5px; width:36px; background:url(../images/icon_4.png) no-repeat center; background-size:cover;  transition: all .2s ease 0; -moz-transition: all .2s ease 0; /* Firefox 4 */ -webkit-transition: all .2s ease 0; /* Safari 和 Chrome */ -o-transition: all .2s ease 0; /* Opera */}
+.content_3_5,#content_3_5_{height:44px; width:44px; background:url(../images/icon_5.png) no-repeat center; background-size:cover;  transition: all .2s ease 0; -moz-transition: all .2s ease 0; /* Firefox 4 */ -webkit-transition: all .2s ease 0; /* Safari 和 Chrome */ -o-transition: all .2s ease 0; /* Opera */}
+#content_3_2_{ background:url(../images/icon_2_1.png) no-repeat center; background-size:cover;}
+#content_3_3_{ background:url(../images/icon_3_1.png) no-repeat center; background-size:cover;}
+#content_3_4_{ background:url(../images/icon_4_1.png) no-repeat center; background-size:cover;}
+#content_3_5_{ background:url(../images/icon_5_1.png) no-repeat center; background-size:cover;} 
+.top{ height:242px; width:100%; background:url(../images/top.jpg) no-repeat center; background-size:cover; position:relative; border-top:3px solid #ac812e;}
+.content_2{ bottom:15px;}
+.content_3{ padding:25px 0;}
+.content_2 input{ width:88%; vertical-align:middle; line-height:50px; height:50px; font:16px Arial; color:#999; padding-left:10px; margin-bottom:1px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.list_1_1box{ width:97%; padding-top:6px;}
+.list_1_1 input{ width:90%; vertical-align:middle; line-height:30px; height:30px; font:14px Arial; color:#999; padding-left:10px; margin-bottom:1px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.list_1_1_xxgg input{ width:88% !important;}
+.xq_jcxx_3 li img{ height:100px;}
+.index_line_6{ font-size: 16px;}
+
+.main_image {width:80%; height:400px; background:#e8e8e8; moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px; font-size:14px; color:#000; overflow-x:hidden; margin:0 auto; position:absolute; top:10%;}
+.main_image ul {width:9999px; height:400px; overflow:hidden; position:absolute; top:0; left:0}
+.main_image li {float:left; width:100%; height:400px;}
+.main_image li span {display:block; width:100%; height:400px}
+.main_image li a {display:block; width:100%; height:400px}
+.main_image_1{ background:url(../images/ico3.jpg) no-repeat center top; background-size:cover; height:400px; width:221px;}
+
+}  
+@media only screen and (max-width : 320px) {  
+.content_2 input{ width:85%; vertical-align:middle;line-height:50px; height:50px; font:16px Arial; color:#999; padding-left:10px; margin-bottom:1px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.list_1_1box{ width:97%; padding-top:6px;}
+.list_1_1 input{ width:87%; vertical-align:middle; line-height:30px; height:30px; font:14px Arial; color:#999; padding-left:10px; margin-bottom:1px; -webkit-tap-highlight-color:rgba(0,0,0,0);/*清除背景色*/}
+.list_1_1_xxgg input{ width:86% !important;}
+.index_line_6{ font-size: 14px;}
+
+.close{ top:480px;}
+div.flicking_con{position:absolute;top:420px;left:50%;z-index:999;width:300px;height:21px;margin:0 0 0 -30px;}
+.main_image {width:80%; height:322px; background:#e8e8e8; moz-border-radius: 2px;-webkit-border-radius: 2px;border-radius: 2px; font-size:14px; color:#000; overflow-x:hidden; margin:0 auto; position:absolute; top:10%;}
+.main_image ul {width:9999px; height:322px; overflow:hidden; position:absolute; top:0; left:0}
+.main_image li {float:left; width:100%; height:322px;}
+.main_image li span {display:block; width:100%; height:322px}
+.main_image li a {display:block; width:100%; height:322px}
+.main_image_1{ background:url(../images/ico3.jpg) no-repeat center top; background-size:cover; height:322px; width:221px;}
+
+}  
+

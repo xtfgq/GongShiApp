@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<title>国家企业信用信息公示系统-查看</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link type="text/css" href="css/CSS3.css" rel="stylesheet" />
+		<link href="fontawesome-4.2.0_ie7/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+		<link href="fontawesome-4.2.0_ie7/4.2.0/css/font-awesome-ie7.min.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+		<!---------状态栏样式---------->
+		<script type="text/javascript" src="js/headerstyle.js"></script>
+		<script type="text/javascript" src="js/template.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/TouchSlide.js"></script>
+		<script type="text/javascript" src="js/iscroll5.2.0.js"></script>
+		<script type="text/javascript" src="js/hd.js"></script>
+		<script type="text/javascript" src="js/commonpath.js"></script>
+
+		<body>
+			<header class="xq_top">
+				<a target="_self" onclick="goBackPage()">
+					<i class="fa fa-angle-left"></i></a> 动产抵押详细信息
+			</header>
+			<div class="xq_box" id="dcdyDetails_div">
+
+				<div class="index_line_1"></div>
+				<div class="xq_jcxx_9">
+					<div class="xq_jcxx_2_1"></div>动产抵押登记信息
+				</div>
+				<div class="xq_jcxx_3">
+					<ul id="dcdy_register_info_ul">
+						<script type="text/html" id="dcdy_register_info_s">
+							<li>登记编号 <span> {{MORREGCNO}}</span></li>
+							<li>登记日期<span> {{REGIDATE}}</span></li>
+							<li>登记机关<span>{{REGORG}}</span></li>
+						</script>
+					</ul>
+				</div>
+				<div class="xq_jcxx_9">
+					<div class="xq_jcxx_2_1"></div>抵押权人概况信息</div>
+				<div class="xq_jcxx_4" id="dcdy_person_info_div">
+					<script type="text/html" id="dcdy_person_info_s">
+						{{each}}
+						<ul class="xq_jcxx_4_1">
+							<li> 抵押权人名称 <span>{{$value.MORE}}</span> </li>
+							<li> 抵押权人证照/证件类型 <span>{{$value.BLICTYPE}}</span> </li>
+						</ul>
+						<ul class="xq_jcxx_4_1">
+							<li> 证照/证件号码 <span>{{$value.BLICNO}}</span> </li>
+							<li> 住所地 <span>{{$value.MORLOC}}</span> </li>
+						</ul>
+						{{/each}}
+					</script>
+				</div>
+				<div class="index_line_4"></div>
+				<div class="xq_jcxx_9">
+					<div class="xq_jcxx_2_1"></div>被担保债权概况信息</div>
+				<div class="xq_jcxx_4">
+					<div id="dcdy_claims_info_div">
+						<script type="text/html" id="dcdy_claims_info_s">
+							<ul class="xq_jcxx_4_1">
+								<li> 种类 <span>{{PRICLASECKIND}}</span> </li>
+								<li> 担保的范围<span>{{WARCOV}}</span> </li>
+							</ul>
+							<ul class="xq_jcxx_4_1">
+								<li>数额<span>{{PRICLASECAM}}</span> </li>
+								<li> 债务人履行债务的期限 <span>{{PEFPERFORM}}至{{PEFPERTO}}</span> </li>
+							</ul>
+							<ul class="xq_jcxx_4_2">
+								<li>备注 <span>{{REMARK}}</span> </li>
+							</ul>
+						</script>
+					</div>
+				</div>
+				<div class="xq_jcxx_9">
+					<div class="xq_jcxx_2_1"></div>抵押物概况信息</div>
+				<div class="xq_jcxx_3">
+					<div id="dcdy_pledge_info_div">
+						<script type="text/html" id="dcdy_pledge_info_s">
+							{{each}}
+							<ul>
+								<li> 名称 <span>{{$value.GUANAME}}</span> </li>
+								<li> 所有权或使用权归属<span>{{$value.OWN}}</span> </li>
+								<li>数量、质量、状况、所在地等情况<span>{{$value.GUADES}}</span> </li>
+								<li>备注 <span>{{$value.GUAREMARK}}</span> </li>
+							</ul>
+							{{/each}}
+						</script>
+
+					</div>
+
+				</div>
+			</div>
+		</body>
+		<script type="text/javascript" src="js/dcdy_ck.js"></script>
+
+</html>

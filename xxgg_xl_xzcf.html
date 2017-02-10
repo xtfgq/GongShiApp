@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">     
+<meta content="yes" name="apple-mobile-web-app-capable">     
+<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+<meta content="telephone=no" name="format-detection">
+<title>国家企业信用信息公示系统-企业年报</title>
+<link rel="stylesheet" href="css/main.css">  
+<link type="text/css" href="css/CSS3.css" rel="stylesheet"/>
+<link href="fontawesome-4.2.0_ie7/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link href="fontawesome-4.2.0_ie7/4.2.0/css/font-awesome-ie7.min.css" type="text/css" rel="stylesheet" />
+<!---------状态栏样式---------->
+<script type="text/javascript" src="js/headerstyle.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/commonpath.js"></script>
+</head>
+<body>
+    <header class="xq_top"> <a href="javascript:history.back(-1)">
+        <i class="fa fa-angle-left"></i></a> 经营异常公告
+    </header>
+    <div class="xq_box" id="bullentShow">
+    	<script type="text/html" id="bullentShowDetail">
+    		<!--<header class="xl_title">北京市工商行政管理局列入经营异常名录决定书</header>
+	        <div class="xl_1">北工商企信字〔2016〕2283号</div>
+	        <div class="xl_2">
+	
+			北京网络创新股份有限公司：
+	
+	        	经查，你单位因公示企业信息隐瞒真实情况、弄虚作假,通过登记的住所或者经营场所无法联系，违反了《企业信息公示暂行条例》第十七条和《企业经营异常名录管理暂行办法》第四条的规定，现决定将其列入经营异常名录。
+		
+	        	你单位如不服本决定，可在接到本决定书之日起六十日内向北京市工商行政管理局或者北京市人民政府申请行政复议；或者三个月内向北京市人民法院提起行政诉讼。
+			</div>
+	        <div class="xl_3">
+	            <span>北京市工商局</span>
+	            <span>2016年05月05日</span>
+	        </div>-->
+	        <header class="xl_title">{{NOTICETITLE}}</header>
+	        <div class="xl_1">{{NOTICENO}}</div>
+	        <div class="xl_2">
+				{{NOTICECONTENT}}
+			</div>
+	        <div class="xl_3">
+	            <span>{{JUDAUTH_CN}}</span>
+	            <span>{{JUDDATE}}</span>
+	        </div>
+    	</script>
+	        
+    </div>
+</body>
+<script type="text/javascript" src="js/xxgg_xl_xzcf.js"></script>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">     
+<meta content="yes" name="apple-mobile-web-app-capable">     
+<meta content="black" name="apple-mobile-web-app-status-bar-style">     
+<meta content="telephone=no" name="format-detection">
+<title>国家企业信用信息公示系统-企业年报</title>
+<link rel="stylesheet" href="css/main.css">  
+<link type="text/css" href="css/CSS3.css" rel="stylesheet"/>
+<link href="fontawesome-4.2.0_ie7/4.2.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link href="fontawesome-4.2.0_ie7/4.2.0/css/font-awesome-ie7.min.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.8.0.js"></script>
+<script type="text/javascript" src="js/qynb.js"></script>
+<!---------状态栏样式---------->
+<script type="text/javascript" src="js/headerstyle.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/commonpath.js"></script>
+</head>
+
+<body style="overflow:hidden;">
+    <header class="xq_top"> <a href="#" onclick="goBackPage()">
+        <i class="fa fa-angle-left"></i></a> <font id="subTitle"></font>
+    </header>
+    <div class="xq_box" style="width:100%; overflow:auto;">
+    <!----------基础信息--------->
+        <div class="xq_jcxx_13">
+            <div class="xq_jcxx_2_1"></div>
+             基本信息
+            <div class="xq_jcxx_2_2"><i class="fa fa-angle-up"></i></div>
+        </div>
+        <div class="xq_jcxx_4">
+        		<div id="searchAnnRepoBase">
+        			<script type="text/html" id="searchAnnRepoBaseList">
+        				 <ul class="xq_jcxx_4_1">
+		        			{{if UNISCID == "" || UNISCID == "{}"}} <li>注册号 <span> {{REGNO}}</span></li>{{else}}<li>统一社会信用代码 <span> {{UNISCID}}</span></li>{{/if}}
+		                <li> 个体用户名称 <span> {{TRANAME}}</span> </li>
+		              </ul>
+		              <ul class="xq_jcxx_4_1">
+		                <li> 经营者姓名 <span> {{NAME}}</span> </li>
+		                <li> 经营者联系电话<span> {{TEL}}</span> </li>
+		              </ul>
+		              <!--<ul class="xq_jcxx_4_1">
+		                <li> 企业联系电话<span></span> </li>
+		                <li> 企业电子邮箱 <span></span> </li>
+		              </ul>-->
+		              <ul class="xq_jcxx_4_1">
+		                <li> 从业人数 <span> {{EMPNUM}}</span></li>
+		               <!-- <li> 其中女性从业人数 <span></span> </li>-->
+		              </ul>
+		              <!--<ul class="xq_jcxx_4_1">
+		                <li> 企业经营状<span> </span> </li>
+		                <li> 企业控股情况 <span></span> </li>
+		              </ul>-->
+		              <!--<ul class="xq_jcxx_4_1">
+		                <li> 企业控股情况<span> 国有控股</span> </li>
+		                <li> 企业电子邮箱 <span> 1234@abcd.com</span> </li>
+		              </ul>
+		              <ul class="xq_jcxx_4_1">
+		                <li> 是否有投资信息或购买其他公司股权<span>是</span> </li>
+		                <li> 是否有网站或网店 <span> 是</span> </li>
+		              </ul>
+		              <ul class="xq_jcxx_4_1">
+		                <li> 是否有对外提供担保信息<span> 是</span> </li>
+		                <li> 有限责任公司本年度是否发生股东股权转让<span> 是</span> </li>
+		              </ul>
+		              <ul class="xq_jcxx_4_2">
+		                <li>企业主营业务活动 <span> 各类人民币、外币的人身保险业务，其中包括各类人寿保险、健康保险、意外伤害保险等保险业务；上述业务的再保险及共保业务；为境内外的保险机构代理保险、检验、理赔等业务；开展保险咨询业务；依照有关法规从事资金运用业务；经中国保险监督管理委员会批准的其他业务。食品药品。</span> </li>
+		              </ul>-->
+        			</script>        			
+        		</div>
+        </div>
+     <!----------基础信息结束--------->  
+     <!----------网站或网店信息--------->  
+        <div class="index_line_3"></div>
+        <div class="xq_jcxx_2">
+            <div class="xq_jcxx_2_1"></div>
+            网站或网店信息
+            <div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+        </div>
+        <div class="xq_jcxx_4" style="display:none" id="store">
+        		<script type="text/html" id="storeList">
+        			{{each}}
+        			 <div class="xq_jcxx_11">
+	                <ul class="xq_jcxx_4_1">
+	                    <li>{{$value.WEBSITNAME}}<span>类型：{{$value.WEBTYPE}}</span><span>网址：{{$value.WEBSITE}}</span> </li>
+	                    <li> {{$value.WEBSITNAME}} <span>类型：{{$value.WEBTYPE}}</span><span>网址：{{$value.WEBSITE}}</span> </li>
+	                </ul>
+	             </div>
+        			{{/each}}
+        		</script>                        
+             <!------循环数据--------->
+            <!--<div class="more_1"><a href="more_bgxx.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+        </div> 
+     <!----------网站或网店信息结束---------> 
+     <!----------股东及出资信息---------> 
+        <!--<div class="index_line_3"></div>
+        <div class="xq_jcxx_2">
+          <div class="xq_jcxx_2_1"></div>
+          股东及出资信息
+          <div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+        </div>
+        <div class="xq_jcxx_4" style="display:none" id="capital">
+        	<script type="text/html" id="capitalList">
+        		
+        		 <div class="xq_jcxx_11">
+                  <ul class="xq_jcxx_11_2">
+                    <li>股东 <span></span></li>
+                  </ul>
+                  <!--<ul class="xq_jcxx_4_1">
+                    <li> 认缴出资额(万元)<span></span> </li>
+                    <li> 实缴出资额(万元<span></span> </li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1"> 
+                    <li> 认缴出资额(万元)<span></span></li>
+                    <li>实缴出资额(万元)<span></span></li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li> 认缴出资日期<span></span></li>
+                    <li> 实缴出资日期<span></span></li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li> 认缴出资方式<span></span> </li>
+                    <li> 实缴出资方式<span></span> </li>
+                  </ul>
+           </div>
+        		
+        	</script>
+           <!--<div class="more_1"><a href="more_bgxx.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>
+        </div>-->
+     <!----------股东及出资信息结束---------> 
+     <!----------对外投资信息---------> 
+        <!--<div class="index_line_3"></div>
+        <div class="xq_jcxx_2">
+          <div class="xq_jcxx_2_1"></div>
+          对外投资信息
+          <div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+        </div>
+        <div class="xq_jcxx_3" style="display:none" id="investment">
+        	<script type="text/html" id="investmentList">
+        		
+        		<ul>
+	            <li class="list_2_1_title"></li>
+	            <li>统一社会信用代码/注册号 <span></span></li>
+          </ul>
+        		
+        	</script>     
+        </div>-->
+     <!----------对外投资信息结束--------->  
+     <!----------企业资产状况信息---------> 
+        <div class="index_line_3"></div>
+        <div class="xq_jcxx_2">
+            <div class="xq_jcxx_2_1"></div>
+             生产经营情况
+            <div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+        </div>
+        <div class="xq_jcxx_4" style="display:none;" id="assets">
+       <script type="text/html" id="assetsList">
+       	 	<ul class="xq_jcxx_4_1">
+                <li> 营业额或营业收入 <span> {{VENDINC}}万元</span></li>
+                <li> 资金数额 <span> {{FUNDAM}}万元</span></li>
+             </ul>              
+       </script>             
+        </div>
+     <!----------企业资产状况信息结束---------> 
+     <!----------对外提供保证担保信息---------> 
+        <!--<div class="index_line_3"></div>
+        <div class="xq_jcxx_2">
+          <div class="xq_jcxx_2_1"></div>
+          对外提供保证担保信息
+          <div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+        </div>
+        <div class="xq_jcxx_4" style="display:none" id="guaranteel">
+        	<script type="text/html" id="guaranteelList">
+        		
+        		 <div class="xq_jcxx_11">
+                  <ul class="xq_jcxx_4_1">
+                    <li> 债权人<span></span> </li>
+                    <li>债务人<span></span> </li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1"> 
+                    <li>主债权种类<span></span></li>
+                    <li>主债权数额<span></span></li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li> 履行债务的期限<span></span></li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li> 保证的期间<span></span> </li>
+                    <li>保证的方式<span></span></li>
+                  </ul>
+            </div>
+        		
+        	</script>
+       <!----------循环数据---------> 
+            <!--<div class="more_1"><a href="more_bgxx.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>
+        </div>-->
+     <!----------对外提供保证担保信息结束---------> 
+     <!----------股权变更信息---------> 
+        <!--<div class="index_line_3"></div>
+        <div class="xq_jcxx_2">
+          <div class="xq_jcxx_2_1"></div>
+          股权变更信息
+          <div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+        </div>
+        <div class="xq_jcxx_4" style="display:none" id="equity">
+        	<script type="text/html" id="equityList">
+        		
+        		<div class="xq_jcxx_11">
+                  <ul class="xq_jcxx_4_1">
+                    <li>股东<span></span> </li>
+                    <li>变更前股权比例<span></span> </li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1"> 
+                    <li>变更后股权比例<span></span></li>
+                    <li>股权变更日期<span></span></li>
+                  </ul>
+           	</div>
+        		
+        	</script>            
+            <!--<div class="more_1"><a href="more_bgxx.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>
+        </div>-->
+     <!----------股权变更信息结束---------> 
+      <!----------社保信息---------> 
+       <!-- <div class="index_line_3"></div>-->
+        <!--<div class="xq_jcxx_2">
+          <div class="xq_jcxx_2_1"></div>
+          社保信息
+          <div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+        </div>-->
+        <!--<div class="xq_jcxx_4" style="display:none">
+            <div class="xq_jcxx_11">
+                  <ul class="xq_jcxx_4_1">
+                    <li>参保险种类型<span>城镇职工基本养老保险</span> </li>
+                    <li>单位参保人数(单位:人)<span>10</span> </li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li>参保险种类型<span>失业保险</span> </li>
+                    <li>单位参保人数(单位:人)<span>10</span> </li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li>参保险种类型<span>职工基本医疗保险</span> </li>
+                    <li>单位参保人数(单位:人)<span>10</span> </li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li>参保险种类型<span>工伤保险</span> </li>
+                    <li>单位参保人数(单位:人)<span>10</span> </li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li>参保险种类型<span>生育保险</span> </li>
+                    <li>单位参保人数(单位:人)<span>10</span> </li>
+                  </ul>
+            </div>
+        </div>-->
+     <!----------社保信息结束--------->
+     <!----------修改信息---------> 
+        <div class="index_line_3"></div>
+        <div class="xq_jcxx_2">
+          <div class="xq_jcxx_2_1"></div>
+          修改信息
+          <div class="xq_jcxx_2_2"><i class="fa fa-angle-down"></i></div>
+        </div>
+        <div class="xq_jcxx_4" style="display:none" id="update">
+        	<script type="text/html" id="updateList">
+        		{{each}}
+        		 <div class="xq_jcxx_11">
+                  <ul class="xq_jcxx_4_1">
+                    <li>修改事项<span>{{$value.ALITEM}}</span> </li>
+                    <li>修改前<span>{{$value.ALTBE}}</span> </li>
+                  </ul>
+                  <ul class="xq_jcxx_4_1">
+                    <li>修改后<span>{{$value.ALTAF}}</span> </li>
+                    <li>修改日期<span>{{$value.ALTDATE}}</span> </li>
+                  </ul>
+            </div>
+			{{/each}}
+        	</script>
+            <!--<div class="more_1"><a href="more_bgxx.html" target="_self">更多<i class="fa fa-circle"></i><i class="fa fa-circle"></i><i class="fa fa-circle"></i></a></div>-->
+        </div>
+     <!----------修改信息结束---------> 
+    </div>
+</body>
+<script type="text/javascript" src="js/qynb_qy.js"></script>
+</html>
