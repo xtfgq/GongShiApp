@@ -411,7 +411,7 @@ function busiLiceFun(params, detailSciptId, detailDivId, licenceScriptId, licenc
 		var jsonData = JSON.parse(data);
 		sessionStorage.setItem("lisdata",data);
 		alert(data+"");
-		//向结果中写入参数-异常字段
+		//向结果中写入参数-异常字段，name，passwd需要重新定义
 		jsonData.busexceptcount = busExceptCount;
 		 $.ajax({
           url : baseUrl,
