@@ -76,6 +76,7 @@ function loadData(){
 					return;
 				}
 				var html = render(JSON.parse(data));
+				alert(data+"");
 				$("#thelist").append(html);
 				pageNo++;
 				myScroll.refresh();

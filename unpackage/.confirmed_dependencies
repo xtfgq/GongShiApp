@@ -1,114 +1,124 @@
 {
-	"search_list.html": {
-		"resources": [
-			"js/down.js",
-			"css/loaders.css",
-			"js/mui.min.js",
-			"js/commonpath.js",
-			"js/search.js",
-			"js/iscrolllist.js",
-			"xq_jcxx.html",
-			"index.html"
-		],
-		"refer": [
-			"xq_jcxx.html",
-			"index.html"
-		]
-	},
-	"index.html": {
-		"resources": [
-			"js/main.js",
-			"css/CSS3.css",
-			"css/main.css",
-			"images/icon_5.png",
-			"images/icon_3.png",
-			"fontawesome-4.2.0_ie7/4.2.0/css/font-awesome-ie7.min.css",
-			"search_list.html",
-			"images/icon_4.png",
-			"images/top.jpg",
-			"js/jquery.touchSlider.min.js",
-			"fontawesome-4.2.0_ie7/4.2.0/fonts/fontawesome-webfont.woff",
-			"images/icon_2_1.png",
-			"images/icon_1.png",
-			"js/jquery-1.8.0.js",
-			"js/jquery.event.drag-1.5.min.js",
-			"js/template.js",
-			"js/index.js",
-			"fontawesome-4.2.0_ie7/4.2.0/css/font-awesome.min.css",
-			"images/icon_5_1.png",
-			"xxgg.html",
-			"images/icon_2.png",
-			"images/icon_4_1.png",
-			"images/icon_3_1.png"
-		],
-		"refer": [
-			"search_list.html",
-			"xxgg.html"
-		]
-	},
-	"xq_jcxx.html": {
-		"resources": [
-			"js/backhome.js",
-			"js/iscroll.js",
-			"js/xq_jcxx.js",
-			"js/TouchSlide.js",
-			"search_list.html",
-			"gd_ck.html",
-			"xq_xzxk.html"
-		],
-		"refer": [
-			"search_list.html",
-			"gd_ck.html",
-			"xq_xzxk.html"
-		]
-	},
-	"gd_ck.html": {
-		"resources": [
-			"js/gd_ck.js",
-			"xq_jcxx.html",
-			"js/headerstyle.js"
-		],
-		"refer": [
-			"xq_jcxx.html"
-		]
-	},
-	"xxgg.html": {
-		"resources": [
-			"js/xxgg.js",
-			"js/leftnav/slideout.min.js",
-			"images/btn.jpg",
-			"css/styles.css",
-			"index.html"
-		],
-		"refer": [
-			"index.html"
-		]
-	},
-	"xq_jyyc.html": {
-		"resources": [
-			"search_list.html",
-			"js/xq_jyyc.js"
-		],
-		"refer": [
-			"search_list.html"
-		]
-	},
-	"xq_xzcf.html": {
-		"resources": [
-			"xq_jyyc.html",
-			"js/xq_xzcf.js"
-		],
-		"refer": [
-			"xq_jyyc.html"
-		]
-	},
-	"xq_xzxk.html": {
-		"resources": [
-			"xq_xzcf.html",
-			"js/xq_xzxk.js"
-		],
-		"refer": [
-			"xq_xzcf.html"
-		]
-	}
+  "search_list.html": {
+    "resources": [
+      "js/down.js",
+      "css/loaders.css",
+      "js/mui.min.js",
+      "js/commonpath.js",
+      "js/search.js",
+      "js/iscrolllist.js",
+      "xq_jcxx.html",
+      "index.html"
+    ],
+    "refer": [
+      "xq_jcxx.html",
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "resources": [
+      "js/main.js",
+      "css/CSS3.css",
+      "css/main.css",
+      "images/icon_5.png",
+      "images/icon_3.png",
+      "fontawesome-4.2.0_ie7/4.2.0/css/font-awesome-ie7.min.css",
+      "search_list.html",
+      "images/icon_4.png",
+      "images/top.jpg",
+      "js/jquery.touchSlider.min.js",
+      "fontawesome-4.2.0_ie7/4.2.0/fonts/fontawesome-webfont.woff",
+      "images/icon_2_1.png",
+      "images/icon_1.png",
+      "js/jquery-1.8.0.js",
+      "js/jquery.event.drag-1.5.min.js",
+      "js/template.js",
+      "js/index.js",
+      "fontawesome-4.2.0_ie7/4.2.0/css/font-awesome.min.css",
+      "images/icon_5_1.png",
+      "xxgg.html",
+      "images/icon_2.png",
+      "images/icon_4_1.png",
+      "images/icon_3_1.png",
+      "info_help.html"
+    ],
+    "refer": [
+      "search_list.html",
+      "xxgg.html"
+    ]
+  },
+  "xq_jcxx.html": {
+    "resources": [
+      "js/backhome.js",
+      "js/iscroll.js",
+      "js/xq_jcxx.js",
+      "js/TouchSlide.js",
+      "search_list.html",
+      "gd_ck.html",
+      "xq_xzxk.html"
+    ],
+    "refer": [
+      "search_list.html",
+      "gd_ck.html",
+      "xq_xzxk.html"
+    ]
+  },
+  "gd_ck.html": {
+    "resources": [
+      "js/gd_ck.js",
+      "xq_jcxx.html",
+      "js/headerstyle.js"
+    ],
+    "refer": [
+      "xq_jcxx.html"
+    ]
+  },
+  "xxgg.html": {
+    "resources": [
+      "js/xxgg.js",
+      "js/leftnav/slideout.min.js",
+      "images/btn.jpg",
+      "css/styles.css",
+      "index.html",
+      "js/iscroll.js"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "xq_jyyc.html": {
+    "resources": [
+      "search_list.html",
+      "js/xq_jyyc.js"
+    ],
+    "refer": [
+      "search_list.html"
+    ]
+  },
+  "xq_xzcf.html": {
+    "resources": [
+      "xq_jyyc.html",
+      "js/xq_xzcf.js"
+    ],
+    "refer": [
+      "xq_jyyc.html"
+    ]
+  },
+  "xq_xzxk.html": {
+    "resources": [
+      "xq_xzcf.html",
+      "js/xq_xzxk.js"
+    ],
+    "refer": [
+      "xq_xzcf.html"
+    ]
+  },
+  "info_help.html": {
+    "resources": [
+      "index.html"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  }
 }

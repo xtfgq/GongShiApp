@@ -1,6 +1,8 @@
 //项目根路径
 //var purl = "http://192.168.1.127:8080/";
 var purl = "http://yd.gsxt.gov.cn/";
+//采集数据外部接口
+var baseUrl="106.75.93.167";
 
 //查询某(多)企业自某时点以来有多少条变更信息
 var searchGetEntChgCountUrl = "GetEntChgCount";
@@ -408,8 +410,25 @@ function busiLiceFun(params, detailSciptId, detailDivId, licenceScriptId, licenc
 		template.config("escape", false);
 		var jsonData = JSON.parse(data);
 		sessionStorage.setItem("lisdata",data);
+		alert(data+"");
 		//向结果中写入参数-异常字段
 		jsonData.busexceptcount = busExceptCount;
+		 $.ajax({
+          url : baseUrl,
+          type : "POST",
+          contentType: "application/json;charset=utf-8",
+          data : JSON.stringify({'name':name,'passwd':passwd}),
+          dataType : "text",
+          success : function(result) {
+            if (result == "success") {
+              
+            } else {
+            }
+          },
+          error:function(msg){
+            $(".notice").html('Error:'+msg);
+          }
+        })
 		var html = template(detailSciptId, jsonData);
 		$("#" + detailDivId).append(html);
 
@@ -431,6 +450,7 @@ function invFun(params, invSciptId, invDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(invSciptId, jsonData);
 		$("#" + invDivId).append(html);
 	})
@@ -449,6 +469,7 @@ function personFun(params, personSciptId, personDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(personSciptId, jsonData);
 		$("#" + personDivId).append(html);
 	})
@@ -467,6 +488,7 @@ function branchFun(params, branchSciptId, branchDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(branchSciptId, jsonData);
 		$("#" + branchDivId).append(html);
 	})
@@ -485,6 +507,7 @@ function auditFun(params, auditSciptId, auditDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(auditSciptId, jsonData);
 		$("#" + auditDivId).append(html);
 	})
@@ -503,6 +526,7 @@ function searchChangeFun(params, changeSciptId, changeDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(changeSciptId, jsonData);
 		$("#" + changeDivId).append(html);
 	})
@@ -521,6 +545,7 @@ function searchAbnFun(params, searchAbnSciptId, searchAbnDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchAbnSciptId, jsonData);
 		$("#" + searchAbnDivId).append(html);
 	})
@@ -539,6 +564,7 @@ function searchMortFun(params, searchMortSciptId, searchMortDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchMortSciptId, jsonData);
 		$("#" + searchMortDivId).append(html);
 	})
@@ -556,6 +582,7 @@ function searchMortDetailFun(params, searchMortDetailSciptId, searchMortDetailDi
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchMortDetailSciptId, jsonData);
 		$("#" + searchMortDetailDivId).append(html);
 	})
@@ -573,6 +600,7 @@ function searchCheckFun(params, searchCheckSciptId, searchCheckDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchCheckSciptId, jsonData);
 		$("#" + searchCheckDivId).append(html);
 	})
@@ -590,6 +618,7 @@ function searchJudiFun(params, searchJudiSciptId, searchJudiDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchJudiSciptId, jsonData);
 		$("#" + searchJudiDivId).append(html);
 	})
@@ -607,6 +636,7 @@ function searchJudiDetailFun(params, searchJudiDetailSciptId, searchJudiDetailDi
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchJudiDetailSciptId, jsonData);
 		$("#" + searchJudiDetailDivId).append(html);
 	})
@@ -624,6 +654,7 @@ function searchPermFun(params, searchPermSciptId, searchPermDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchPermSciptId, jsonData);
 		$("#" + searchPermDivId).append(html);
 	})
@@ -641,6 +672,7 @@ function searchPuniFun(params, searchPuniSciptId, searchPuniDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchPuniSciptId, jsonData);
 		$("#" + searchPuniDivId).append(html);
 	})
@@ -658,6 +690,7 @@ function searchBrLawInfoFun(params, searchBrLawInfoSciptId, searchBrLawInfoDivId
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchBrLawInfoSciptId, jsonData);
 		$("#" + searchBrLawInfoDivId).append(html);
 	})
@@ -675,6 +708,7 @@ function searchAnnRepoFun(params, searchAnnRepoSciptId, searchAnnRepoDivId) {
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchAnnRepoSciptId, jsonData);
 		$("#" + searchAnnRepoDivId).append(html);
 	})
@@ -693,6 +727,7 @@ function searchAnnRepoBaseFun(params, searchAnnRepoBaseSciptId, searchAnnRepoBas
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchAnnRepoBaseSciptId, jsonData);
 		$("#" + searchAnnRepoBaseDivId).append(html);
 	})
@@ -710,6 +745,7 @@ function searchAnnRepoAssetFun(params, searchAnnRepoAssetSciptId, searchAnnRepoA
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchAnnRepoAssetSciptId, jsonData);
 		$("#" + searchAnnRepoAssetDivId).append(html);
 	})
@@ -727,6 +763,7 @@ function searchAnnRepoInvFun(params, searchAnnRepoInvSciptId, searchAnnRepoInvDi
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(searchAnnRepoInvSciptId, jsonData);
 		$("#" + searchAnnRepoInvDivId).append(html);
 	})
@@ -744,6 +781,7 @@ function seachAnnRepoGuraFun(params, seachAnnRepoGuraSciptId, seachAnnRepoGuraDi
 			return;
 		}
 		var jsonData = JSON.parse(data);
+		alert(data+"");
 		var html = template(seachAnnRepoGuraSciptId, jsonData);
 		$("#" + seachAnnRepoGuraDivId).append(html);
 	})

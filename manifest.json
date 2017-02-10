@@ -39,7 +39,8 @@
 					"xxgg.html",
 					"images/icon_2.png",
 					"images/icon_4_1.png",
-					"images/icon_3_1.png"
+					"images/icon_3_1.png",
+					"info_help.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -72,7 +73,8 @@
 					"js/leftnav/slideout.min.js",
 					"images/btn.jpg",
 					"css/styles.css",
-					"index.html"
+					"index.html",
+					"js/iscroll.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -97,6 +99,13 @@
 				"resources": [
 					"xq_xzcf.html",
 					"js/xq_xzxk.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"info_help.html": {
+				"resources": [
+					"index.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -175,7 +184,6 @@
 				"js/hd.js",
 				"svn-13B9BA3F",
 				"js/xzxk_ck.js",
-				"info_help.html",
 				"xq_jcxx_18.html",
 				"js/follow.js",
 				"js/xxgg_xl_xzcf_zy.js",
